@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social links profile</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .text {
+        color: hsl(0, 0%, 100%);
+      }
+      .h2-text {
+        color: hsl(75, 94%, 57%);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 min-h-screen flex flex-col justify-center items-center">
+    <main class="bg-gray-800 w-[50%] md:w-[25%] pb-3 rounded-xl px-0 md:px-4">
+      <div class="flex items-center flex-col w-full">
+        <div class="flex items-center flex-col">
+          <img
+            src="./assets//images/avatar-jessica.jpeg"
+            class="w-[5em] rounded-full mt-6"
+          />
+          <h1 class="text mt-6 text-3xl font-medium">Jessica Randall</h1>
+          <h2 class="h2-text mt-1 font-medium">London, United Kingdom</h2>
+          <p class="text mt-6 text-[14px]">
+            "Front-end developer and avid reader."
+          </p>
+        </div>
+        <div id="button-container" class="flex flex-col w-full items-center mt-3"></div>
+      </div>
+    </main>
+
+    <div class="attribution mt-2 text-white">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Muskan</a>.
+    </div>
+  </body>
+  <script>
+    let buttons = [
+      "GitHub",
+      "Frontend Mentor",
+      "LinkedIn",
+      "Twitter",
+      "Instagram",
+    ];
+    let container = document.getElementById("button-container");
+    buttons.map((name) => {
+      let btn = document.createElement("button");
+      btn.textContent = name;
+      btn.className =
+        "bg-gray-700 text-white px-4 py-2 m-2 rounded-[9px] hover:bg-[hsl(75,94%,57%)] w-[90%] hover:text-black font-medium";
+      container.appendChild(btn);
+    });
+  </script>
+</html>
